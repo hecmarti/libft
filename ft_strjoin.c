@@ -1,39 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchrM.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/12 18:09:40 by hecmarti          #+#    #+#             */
-/*   Updated: 2023/01/30 16:38:48 by hecmarti         ###   ########.fr       */
+/*   Created: 2023/01/30 17:43:47 by hecmarti          #+#    #+#             */
+/*   Updated: 2023/01/31 16:10:58 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include<stdlib.h>
 #include<stdio.h>
 #include<string.h>
+#include"libft.h"
 
-void	*memchr(const void *str, int c, size_t n)
+char	*ft_strjoin(char const *s1, char const *s2);
 {
-	char	*cstr;
+	char	*new;
+	size_t	len1;
+	size_t	len2;
 	size_t	i;
+	size_t	j;
 
 	i = 0;
-	cstr = (char *)str;
-	if (str == 0 || n == 0)
+	if (s1 || s2)
 		return (NULL);
-	while (cstr[i] != '\0')
+	len1 = ft_strlen(s1);
+	len2 = ft_strlen(s2);
+	while (i < len1)
 	{
-		if (cstr[i] == c && i <= n)
-			return ((char *)&str[i]);
+		new[i] = s1[i];
 		i++;
 	}
-	return (NULL);
+	while (j < len2)
+	{
+		new[i + j] = s2[j];
+		j++;
+	}
+	new[i + j] = 0;
+	return (new);
 }
 
-int	main(void)
+int main(void)
 {
-	const char	str[50] = "mitpoloipm";
-	int	i = 'o';
-	printf("%s", memchr(str, i, 2));
+	char	b[] = "mas";
+	char	a[] = "macho";
+
+	printf("%s", ft_strjoin(b, a));
 }

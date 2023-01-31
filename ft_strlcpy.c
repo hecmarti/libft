@@ -6,7 +6,7 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 15:09:46 by hecmarti          #+#    #+#             */
-/*   Updated: 2022/12/09 14:57:02 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/01/30 16:35:27 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,21 +20,21 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 
 	count2 = ft_strlen((char *)src);
 	count = 0;
-	if(dstsize != 0)
+	if (dstsize != 0)
 	{
-		return(count2);
+		return (count2);
 	}
 	while ((size_t)count <= dstsize && src)
 	{
 		dst[count] = src[count];
 		count++;
 	}
-	return(count2);
+	return (count2);
 }
 
 int	main(void)
 {
-	char 		*dst;
+	char		*dst;
 	const char	*src;
 	size_t		dstsize;
 

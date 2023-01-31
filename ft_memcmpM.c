@@ -6,21 +6,21 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 16:58:22 by hecmarti          #+#    #+#             */
-/*   Updated: 2022/12/13 17:27:40 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/01/30 16:38:36 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<stdio.h>
 
-int ft_memcmp(const void *rstr1, const void *rstr2, size_t n)
+int	ft_memcmp(const void *rstr1, const void *rstr2, size_t n)
 {
-	size_t 	count;
-    char    *str1;
-    char    *str2;
+	size_t	count;
+	char	*str1;
+	char	*str2;
 
 	count = 0;
-    str1 = (char *)rstr1;
-    str2 = (char *)rstr2;
+	str1 = (char *)rstr1;
+	str2 = (char *)rstr2;
 	while (str1[count] && str2[count] && (size_t)count <= n)
 	{
 		if (str1[count] > str2[count])

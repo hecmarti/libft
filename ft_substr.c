@@ -1,39 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchrM.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/12 18:09:40 by hecmarti          #+#    #+#             */
-/*   Updated: 2023/01/30 16:38:48 by hecmarti         ###   ########.fr       */
+/*   Created: 2023/01/30 16:30:45 by hecmarti          #+#    #+#             */
+/*   Updated: 2023/01/30 17:40:31 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<stdio.h>
-#include<string.h>
+#include<stdlib.h>
 
-void	*memchr(const void *str, int c, size_t n)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*cstr;
-	size_t	i;
+	int		i;
+	char	*s2;
 
 	i = 0;
-	cstr = (char *)str;
-	if (str == 0 || n == 0)
+	s2 = (char *)malloc(sizeof(char) * (len + 1));
+	if (!s)
 		return (NULL);
-	while (cstr[i] != '\0')
+	while (i < (int)len && s[start + i])
 	{
-		if (cstr[i] == c && i <= n)
-			return ((char *)&str[i]);
+		s2[i] = s[start + i];
 		i++;
 	}
-	return (NULL);
+	s2[i] = 0;
+	return (s2);
 }
 
 int	main(void)
 {
-	const char	str[50] = "mitpoloipm";
-	int	i = 'o';
-	printf("%s", memchr(str, i, 2));
+	char const		*s;
+	unsigned int	start;
+	size_t			len;
+
+	s = "quiero que saques ya algo";
+	start = '1';
+	len = '9';
+	printf("%s\n", ft_substr(s, start, len));
 }
