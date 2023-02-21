@@ -6,7 +6,7 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 15:33:58 by hecmarti          #+#    #+#             */
-/*   Updated: 2022/12/17 14:54:42 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/02/21 16:05:50 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ int	ft_atoi(const char *str)
 	}
 	while ((str[count] >= '0') && (str[count] <= '9'))
 	{
-		/*aux = str[count] * 10;*/
 		aux = (aux * 10) + (str[count] - '0');
 		count++;
 	}
