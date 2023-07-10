@@ -6,52 +6,52 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 19:51:11 by hecmarti          #+#    #+#             */
-/*   Updated: 2022/12/01 19:45:00 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/07/10 10:20:45 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<stdio.h>
 #include"libft.h"
+#include<string.h>
+#include <stddef.h>
 
-char	*ft_strnstr(const char *str1, const char *str2, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int	count1;
-	int	count2;
-	int	result;
-	int	len1;
+	size_t	i;
+	size_t	j;
 
-	count1 = 0;
-	count2 = 0;
-	len1 = ft_strlen(str1);
-	while (str1[count1])
+	if (*needle == '\0')
+		return ((char *)haystack);
+	i = 0;
+	while (haystack[i] && i < len)
 	{
-		while (str1[count1] == str2[count2])
+		j = 0;
+		while (haystack[i + j] == needle[j] && (i + j) < len)
 		{
-			while (len1 < len)
-			{
-				result = count1;
-				if (count1 == len1)
-					return (result);
-			}
+			if (needle[j + 1] == '\0')
+				return ((char *)&haystack[i]);
+			j++;
 		}
-		count1++;
-		count2 = 0;
+		i++;
 	}
-	result = -1;
-	return (result);
+	return (NULL);
 }
 
 int	main(void)
 {
-	const char	*str1;
-	const char	*str2;
-	size_t		len;
+	const char *haystack = "Hello, world! This is a test string.";
+	const char *needle = "world";
+	size_t len = 30;
+	char *result = ft_strnstr(haystack, needle, len);
 
-	str1 = "Hola";
-	str2 = "la";
-	len = '5';
-	printf("%d", ft_strnstr(str1, str2, len));
+	if (result != NULL)
+		printf("Subcadena encontrada en la posición: %ld\n", result - haystack);
+	else
+		printf("Subcadena no encontrada.\n");
+
+	return 0;
 }
+
 /*
 TODO
 TOFIX

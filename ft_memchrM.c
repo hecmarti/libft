@@ -6,14 +6,14 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 18:09:40 by hecmarti          #+#    #+#             */
-/*   Updated: 2023/01/30 16:38:48 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/07/10 10:49:16 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<stdio.h>
 #include<string.h>
 
-void	*memchr(const void *str, int c, size_t n)
+void	*ft_memchr(const void *str, int c, size_t n)
 {
 	char	*cstr;
 	size_t	i;
@@ -33,7 +33,15 @@ void	*memchr(const void *str, int c, size_t n)
 
 int	main(void)
 {
-	const char	str[50] = "mitpoloipm";
-	int	i = 'o';
-	printf("%s", memchr(str, i, 2));
+	char *str = "Hello, world!";
+	int c = 'o';
+	
+	void *result = ft_memchr(str, c, strlen(str));
+
+	if (result != NULL)
+		printf("El byte '%c' fue encontrado.\n", c);
+	else
+		printf("El byte '%c' no fue encontrado.\n", c);
+
+	return 0;
 }

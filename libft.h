@@ -6,7 +6,7 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 18:18:33 by hecmarti          #+#    #+#             */
-/*   Updated: 2022/12/05 17:00:53 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/07/10 11:08:58 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,12 @@ int		ft_isprint(int a);
 void	*ft_memset(void *str, int c, size_t n);
 char	*ft_strchr(const char *str, int c);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
-int		ft_strlen(char *a);
+size_t	ft_strlen(char const *a);
 int		ft_strncmp(const char *str1, const char *str2, size_t n);
-int		ft_strnstr(const char *str1, const char *str2, size_t len);
+char	*ft_strnstr(const char *str1, const char *str2, size_t len);
 char	*strrchr(const char *str, int c);
 int		ft_tolower(int a);
 int		ft_toupper(int c);
+char	*ft_strjoin(char const *s1, char const *s2);
+
 #endif

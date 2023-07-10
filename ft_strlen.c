@@ -6,21 +6,20 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 12:20:47 by hecmarti          #+#    #+#             */
-/*   Updated: 2022/12/12 18:12:45 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/06/12 12:33:29 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<stdio.h>
+#include"libft.h"
 
-int	ft_strlen(char *a)
+size_t	ft_strlen(char const *a)
 {
 	int	count;
 
 	count = 0;
-	while (a[count])
-	{
+	while (a[count] != '\0')
 		count++;
-	}
 	return (count);
 }
 
@@ -29,7 +28,6 @@ int	main(void)
 {
 	char	*a;
 
-	a = "Para ver que sabes hacerlo";
-	printf("%d\n", ft_strlen(a));
-}
-*/
+	a = "Hola";
+	printf("%zu\n", ft_strlen(a));
+}*/
