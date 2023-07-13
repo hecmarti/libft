@@ -6,7 +6,7 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 18:09:40 by hecmarti          #+#    #+#             */
-/*   Updated: 2023/07/10 10:49:16 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/07/13 09:38:41 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	*ft_memchr(const void *str, int c, size_t n)
 int	main(void)
 {
 	char *str = "Hello, world!";
-	int c = 'o';
+	int c = 'i';
 	
 	void *result = ft_memchr(str, c, strlen(str));
 

@@ -6,7 +6,7 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 18:18:33 by hecmarti          #+#    #+#             */
-/*   Updated: 2023/07/10 11:08:58 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/07/11 10:33:53 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int		ft_isascii(int a);
 int		ft_isdigit(int a);
 int		ft_isprint(int a);
 void	*ft_memset(void *str, int c, size_t n);
+void	*ft_memcpy(void *dst, const void *src, size_t n);
 char	*ft_strchr(const char *str, int c);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlen(char const *a);
