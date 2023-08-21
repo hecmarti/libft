@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/28 12:18:45 by hecmarti          #+#    #+#             */
-/*   Updated: 2023/08/01 10:08:19 by hecmarti         ###   ########.fr       */
+/*   Created: 2023/08/01 09:16:49 by hecmarti          #+#    #+#             */
+/*   Updated: 2023/08/01 09:25:23 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
+#include <stddef.h>
 
-int	ft_isalpha(int a)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	if ((a >= 65 && a <= 90) || (a >= 97 && a <= 122))
-		return (1);
-	return (0);
-}
-
-int	main(void)
-{
-	int	a;
-
-	a = 'h';
-	printf("%d", ft_isalpha(a));
+	if (s && f)
+	{
+		unsigned int i = 0;
+		while (*s)
+		{
+			f(i, s);
+			s++;
+			i++;
+		}
+	}
 }

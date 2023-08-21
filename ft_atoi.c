@@ -6,7 +6,7 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 15:33:58 by hecmarti          #+#    #+#             */
-/*   Updated: 2023/02/21 16:05:50 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/08/01 10:05:01 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ int	ft_atoi(const char *str)
 	int	aux;
 
 	val = 1;
-	while ((str[count] >= 9) && (str[count] <= 13) || (str[count] == 32))
+	count = 0;
+	while ((str[count] >= 9) && (str[count] <= 13))
 		count++;
 	if ((str[count] == 45) || (str[count] == 43))
 	{
