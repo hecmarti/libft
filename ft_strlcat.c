@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcatM.c                                      :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 16:16:06 by hecmarti          #+#    #+#             */
-/*   Updated: 2023/01/30 16:37:38 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/08/21 11:19:48 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[dstsize - 1] = '\0';
 	return (len_src + result);
 }
-
+/*
 int	main(void)
 {
 	char		dst[20];
@@ -67,3 +67,4 @@ int	main(void)
     printf("original size result: %zu\n", strlcat(dst2, src2, dstsize2));
     printf("original result: %s\n", dst2);
 }
+*/

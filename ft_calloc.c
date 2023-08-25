@@ -6,7 +6,7 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/10 11:23:58 by hecmarti          #+#    #+#             */
-/*   Updated: 2023/07/10 11:44:36 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/08/21 10:20:51 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,28 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	size_t total_size = count * size;
-	void *ptr = malloc(total_size);
+	size_t			total_size;
+	void			*ptr;
+	unsigned char	*byte_ptr;
+	size_t			i;
 
+	i = 0;
+	total_size = count * size;
+	ptr = malloc(total_size);
 	if (ptr != NULL)
 	{
-		unsigned char *byte_ptr = (unsigned char *)ptr;
-		for (size_t i = 0; i < total_size; i++)
+		byte_ptr = (unsigned char *)ptr;
+		while (i < total_size)
 		{
-			byte_ptr[i] = 0;
+			if (i < total_size)
+				byte_ptr[i] = 0;
+			i++;
 		}
 	}
-
-	return ptr;
+	return (ptr);
 }
 
+/*
 int	main(void)
 {
 	size_t num_elements = 5;
@@ -57,3 +64,4 @@ int	main(void)
 
 	return 0;
 }
+*/

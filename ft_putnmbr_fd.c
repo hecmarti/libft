@@ -6,39 +6,29 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 11:07:01 by hecmarti          #+#    #+#             */
-/*   Updated: 2023/08/01 10:33:24 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/08/21 11:23:11 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
 
 void	ft_putnmbr_fd(int n, int fd)
 {
-	int t;
-	size_t c;
+	long	num;
 
-	if (n == 0)
-	{
-		ft_putchar_fd('0', fd);
-		return ;
-	}
-	if (n < 0)
+	num = n;
+	if (num < 0)
 	{
 		ft_putchar_fd('-', fd);
-		n *= -1;
+		num *= -1;
 	}
-	t = n;
-	c = 1;
-	while ((t /= 10) > 0)
-		c *= 10;
-	while (c > 0)
-	{
-		ft_putchar_fd((n / c) + '0', fd);
-		n %= c;
-		c /= 10;
-	}
+	if (num >= 10)
+		ft_putnmbr_fd(num / 10, fd);
+	ft_putchar_fd(num % 10 + '0', fd);
 }
 
+/*
 int	main(void) {
 	long int	t;
 	int fd;
@@ -58,3 +48,4 @@ int	main(void) {
 	else
 		ft_putchar_fd((t + '0'), fd);
 }
+*/

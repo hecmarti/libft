@@ -6,7 +6,7 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 12:19:18 by hecmarti          #+#    #+#             */
-/*   Updated: 2022/11/28 12:25:22 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/08/21 11:46:51 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int	ft_isascii(int a)
 	return (0);
 }
 
+/*
 int	main(void)
 {
 	int	a;
@@ -28,3 +29,4 @@ int	main(void)
 	a = 'r';
 	printf("%d", ft_isascii(a));
 }
+*/

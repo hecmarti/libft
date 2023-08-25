@@ -6,7 +6,7 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 16:30:45 by hecmarti          #+#    #+#             */
-/*   Updated: 2023/01/30 17:40:31 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/08/21 11:49:04 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (s2);
 }
 
+/*
 int	main(void)
 {
 	char const		*s;
@@ -42,3 +43,4 @@ int	main(void)
 	len = '9';
 	printf("%s\n", ft_substr(s, start, len));
 }
+*/

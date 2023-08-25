@@ -6,7 +6,7 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 16:13:00 by hecmarti          #+#    #+#             */
-/*   Updated: 2022/12/02 17:48:22 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/08/21 10:30:40 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ void	*ft_memmove(void *str1, const void *str2, size_t n)
 	return (first);
 }
 
+/*
 int	main(void)
 {
 	char	dest[] = "oldstring";
@@ -47,3 +48,4 @@ int	main(void)
 	ft_memmove(dest, src, n);
 	printf("After memmove dest = %s, src = %s\n", dest, src);
 }
+*/

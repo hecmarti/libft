@@ -6,7 +6,7 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 13:58:50 by hecmarti          #+#    #+#             */
-/*   Updated: 2023/07/10 10:34:37 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/08/21 10:52:02 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 static int	get_num_len(int n)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	if (n <= 0)
@@ -25,7 +25,7 @@ static int	get_num_len(int n)
 		n /= 10;
 		len++;
 	}
-	return len;
+	return (len);
 }
 
 char	*ft_itoa(int n)
@@ -38,33 +38,26 @@ char	*ft_itoa(int n)
 	sign = 1;
 	if (n < 0)
 	{
+		n = -n;
 		sign = -1;
-		len++;
 	}
 	str = (char *)malloc((len + 1) * sizeof(char));
 	if (!str)
-		return NULL;
-	str[len] = '\0';
+		return (NULL);
+	str[len--] = '\0';
 	if (n == 0)
-	{
 		str[0] = '0';
-		return str;
-	}
-	if (n < 0)
-		str[0] = '-';
-	while (n != 0)
+	while (n)
 	{
-		str[--len] = '0' + (n % 10) * sign;
+		str[len--] = '0' + (n % 10) * sign;
 		n /= 10;
 	}
-	return str;
+	if (sign == -1)
+		str[0] = '-';
+	return (str);
 }
 
-
-#include <stdio.h>
-
-char	*ft_itoa(int n);
-
+/*
 int	main(void)
 {
 	int number = -12345;
@@ -77,5 +70,6 @@ int	main(void)
 
 	free(result);
 
-	return 0;
+	return (0);
 }
+*/

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmpM.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 16:58:22 by hecmarti          #+#    #+#             */
-/*   Updated: 2023/01/30 16:38:36 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/08/21 11:47:18 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ int	ft_memcmp(const void *rstr1, const void *rstr2, size_t n)
 	return ('NULL');
 }
 
+/*
 int	main(void)
 {
 	const char	*str1;
@@ -45,3 +46,4 @@ int	main(void)
 	n = 0;
 	printf("%d", ft_memcmp(str1, str2, n));
 }
+*/

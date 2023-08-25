@@ -6,16 +6,13 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 09:29:40 by hecmarti          #+#    #+#             */
-/*   Updated: 2023/08/01 09:38:57 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/08/21 10:01:06 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include <stdlib.h>
 #include <stdio.h>
-
-#include <stddef.h>
-#include <stdlib.h>
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -24,16 +21,13 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size_t	i;
 
 	if (!s || !*s)
-		return NULL;
-
+		return (NULL);
 	len = 0;
 	while (s[len])
 		len++;
-
 	result = (char *)malloc(sizeof(char) * (len + 1));
 	if (!result)
-		return NULL;
-
+		return (NULL);
 	i = 0;
 	while (i < len)
 	{
@@ -41,16 +35,15 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		i++;
 	}
 	result[i] = '\0';
-
-	return result;
+	return (result);
 }
 
-char modify_char(unsigned int index, char c)
+char	modify_char(unsigned int index, char c)
 {
-	return c + index;
+	return (c + index);
 }
-
-int main(void)
+/*
+int	main(void)
 {
 	const char *original_str = "Hello";
 	char *modified_str = ft_strmapi(original_str, &modify_char);
@@ -68,3 +61,4 @@ int main(void)
 
 	return 0;
 }
+*/

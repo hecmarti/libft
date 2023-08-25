@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstrM.c                                      :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 19:51:11 by hecmarti          #+#    #+#             */
-/*   Updated: 2023/07/10 10:20:45 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/08/21 11:49:46 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	return (NULL);
 }
 
+/*
 int	main(void)
 {
 	const char *haystack = "Hello, world! This is a test string.";
@@ -52,7 +53,6 @@ int	main(void)
 	return 0;
 }
 
-/*
 TODO
 TOFIX
 

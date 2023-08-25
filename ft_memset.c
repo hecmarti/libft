@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memsetM.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 16:46:46 by hecmarti          #+#    #+#             */
-/*   Updated: 2023/07/10 10:42:14 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/08/21 11:49:33 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,14 @@ void	*ft_memset(void *b, int c, size_t n)
 	}
 	return (b);
 }
-
+/*
 int	main(void)
 {
-	char	b[] = "This is a string";
+	char	b;
 
+	b[] = "This is a string";
 	ft_memset(b, 's', 7);
 	printf("%s\n", b);
 }
-/*
 look about having 2 inputs at the second input at funtion
 */

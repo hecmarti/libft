@@ -6,7 +6,7 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 12:29:20 by hecmarti          #+#    #+#             */
-/*   Updated: 2022/11/28 13:03:10 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/08/21 11:49:11 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int	ft_tolower(int a)
 	return (a);
 }
 
+/*
 int	main(void)
 {
 	int	a;
@@ -26,3 +27,4 @@ int	main(void)
 	a = 'C';
 	printf("%c", ft_tolower(a));
 }
+*/

@@ -6,7 +6,7 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 10:12:14 by hecmarti          #+#    #+#             */
-/*   Updated: 2023/07/13 09:44:37 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/08/21 10:24:52 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,19 +17,19 @@
 
 char	*ft_strdup(const char *s)
 {
-	size_t len;
-	char *copy;
+	size_t	len;
+	char	*copy;
 
 	len = strlen(s) + 1;
 	copy = (char *)malloc(len);
 	if (copy == NULL)
-		return NULL;
+		return (NULL);
 	else
 		ft_memcpy(copy, s, len);
-	return copy;
+	return (copy);
 }
-
-int main(void)
+/*
+int	main(void)
 {
     const char *original = "Hello, world!";
     char *duplicate = ft_strdup(original);
@@ -46,3 +46,4 @@ int main(void)
 
     return 0;
 }
+*/

@@ -6,7 +6,7 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 13:04:26 by hecmarti          #+#    #+#             */
-/*   Updated: 2022/12/13 16:05:16 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/08/21 11:48:03 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ char	*ft_strchr(const char *str, int c)
 	return (NULL);
 }
 
+/*
 int	main(void)
 {
 	const char	*str;
@@ -37,3 +38,4 @@ int	main(void)
 	c = 'o';
 	printf("%s", ft_strchr(str, c));
 }
+*/

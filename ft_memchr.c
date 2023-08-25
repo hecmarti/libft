@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchrM.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 18:09:40 by hecmarti          #+#    #+#             */
-/*   Updated: 2023/07/13 09:38:41 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/08/21 10:53:31 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ void	*ft_memchr(const void *str, int c, size_t n)
 	return (NULL);
 }
 
+/*
 int	main(void)
 {
 	char *str = "Hello, world!";
@@ -43,5 +44,6 @@ int	main(void)
 	else
 		printf("El byte '%c' no fue encontrado.\n", c);
 
-	return 0;
+	return (0);
 }
+*/

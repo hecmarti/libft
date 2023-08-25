@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchrM.c                                      :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 14:51:35 by hecmarti          #+#    #+#             */
-/*   Updated: 2022/11/30 12:56:53 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/08/25 09:27:13 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<stdio.h>
 
-char	*strrchr(const char *str, int c)
+char	*ft_strrchr(const char *str, int c)
 {
 	int	count;
 	int	state;
@@ -35,6 +35,7 @@ char	*strrchr(const char *str, int c)
 	return ("-1");
 }
 
+/*
 int	main(void)
 {
 	const char	*str;
@@ -44,3 +45,4 @@ int	main(void)
 	c = '.';
 	printf("%s", strrchr(str, c));
 }
+*/

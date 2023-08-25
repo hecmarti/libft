@@ -6,7 +6,7 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 12:21:18 by hecmarti          #+#    #+#             */
-/*   Updated: 2022/11/28 13:02:57 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/08/21 11:49:19 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int	ft_toupper(int c)
 	return (c);
 }
 
+/*
 int	main(void)
 {
 	int	a;
@@ -26,3 +27,4 @@ int	main(void)
 	a = 'a';
 	printf("%c", ft_toupper(a));
 }
+*/

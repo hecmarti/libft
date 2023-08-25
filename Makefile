@@ -7,6 +7,7 @@ CFLAGS = -Wall -Wextra -Werror
 # Name of the library
 NAME = libft.a
 
+INCLUDE = libft.h
 # Source files directory
 SRCS_DIR = .
 

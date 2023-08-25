@@ -6,7 +6,7 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 17:43:47 by hecmarti          #+#    #+#             */
-/*   Updated: 2023/06/07 12:22:51 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/08/21 11:48:20 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int	ft_strlen(char const *a)
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*new;
+	char			*new;
 	unsigned int	i;
 	unsigned int	j;
 
@@ -75,21 +75,21 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		new[i] = s1[i];
 		i++;
 	}
-
 	while (s2[j])
 	{
 		new[i + j] = s2[j];
 		j++;
 	}
-
 	new[i + j] = '\0';
 	return (new);
 }
 
-int main(void)
+/*
+int	main(void)
 {
 	char const	b[] = "mas";
 	char const	a[] = "Trigonometria";
 
 	printf("%s", ft_strjoin(b, a));
 }
+*/

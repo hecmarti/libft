@@ -6,7 +6,7 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 15:33:58 by hecmarti          #+#    #+#             */
-/*   Updated: 2023/08/01 10:05:01 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/08/21 11:46:22 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,11 @@ int	ft_atoi(const char *str)
 	}
 	return (aux *= val);
 }
-
+/*
 int	main(void)
 {
 	const char	str[] = "123";
 
 	printf("%d\n", ft_atoi(str));
 }
+*/

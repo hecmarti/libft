@@ -6,7 +6,7 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 12:20:29 by hecmarti          #+#    #+#             */
-/*   Updated: 2022/11/28 12:26:30 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/08/21 11:47:06 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int	ft_isprint(int a)
 	return (0);
 }
 
+/*
 int	main(void)
 {
 	int	a;
@@ -28,3 +29,4 @@ int	main(void)
 	a = 'w';
 	printf("%d", ft_isprint(a));
 }
+*/

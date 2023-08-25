@@ -6,7 +6,7 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 12:18:45 by hecmarti          #+#    #+#             */
-/*   Updated: 2023/08/01 10:08:19 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/08/21 11:46:43 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int	ft_isalpha(int a)
 	return (0);
 }
 
+/*
 int	main(void)
 {
 	int	a;
@@ -26,3 +27,4 @@ int	main(void)
 	a = 'h';
 	printf("%d", ft_isalpha(a));
 }
+*/

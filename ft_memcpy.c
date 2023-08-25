@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpyM.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 17:32:19 by hecmarti          #+#    #+#             */
-/*   Updated: 2022/12/07 16:14:00 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/08/21 11:24:04 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	return (dst);
 }
 
+/*
 int	main(void)
 {
 	size_t		n = 7;
@@ -39,3 +40,4 @@ int	main(void)
 
 	printf("%s", ft_memcpy(dst, src, n));
 }
+*/

@@ -6,7 +6,7 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 15:09:46 by hecmarti          #+#    #+#             */
-/*   Updated: 2023/01/30 16:35:27 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/08/21 11:48:30 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	return (count2);
 }
 
+/*
 int	main(void)
 {
 	char		*dst;
@@ -44,3 +45,4 @@ int	main(void)
 	printf("%zu\n", ft_strlcpy(dst, src, dstsize));
 	printf("%s", src);
 }
+*/

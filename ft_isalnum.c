@@ -6,7 +6,7 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 12:17:15 by hecmarti          #+#    #+#             */
-/*   Updated: 2023/08/01 10:07:46 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/08/21 11:54:18 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_isalnum(int a)
 		return (1);
 	return (0);
 }
-
+/*
 int	main(void)
 {
 	int	a;
@@ -26,3 +26,4 @@ int	main(void)
 	a = 'd';
 	printf("%d", ft_isalnum(a));
 }
+*/
