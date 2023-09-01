@@ -8,6 +8,7 @@ CFLAGS = -Wall -Wextra -Werror
 NAME = libft.a
 
 INCLUDE = libft.h
+
 # Source files directory
 SRCS_DIR = .
 
@@ -17,13 +18,14 @@ SRCS = $(wildcard $(SRCS_DIR)/*.c)
 # Object files
 OBJS = $(SRCS:.c=.o)
 
+all: $(NAME)
 # Make rule to build the library
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
 # Make rule to build the object files
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -I. -c $< -o $@
 
 # Make rule to clean object files
 clean:
