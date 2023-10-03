@@ -6,35 +6,34 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 16:13:00 by hecmarti          #+#    #+#             */
-/*   Updated: 2023/08/21 10:30:40 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/09/01 11:03:48 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
+#include "libft.h"
 
-void	*ft_memmove(void *str1, const void *str2, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t	i;
-	char	*first;
-	char	*second;
+	unsigned char		*d;
+	const unsigned char	*s;
 
-	i = 0;
-	first = (char *)str1;
-	second = (char *)str2;
-	if (first < second)
+	if (!dst && !src)
+		return (NULL);
+	d = (unsigned char *)dst;
+	s = (const unsigned char *)src;
+	if (dst < src)
 	{
-		while (n-- > 0)
-			first[n] = second[n];
+		while (len--)
+			*d++ = *s++;
 	}
-	else
+	else if (dst > src)
 	{
-		while (i < n)
-		{
-			first[i] = second[i];
-			i++;
-		}
+		d += len;
+		s += len;
+		while (len--)
+			*(--d) = *(--s);
 	}
-	return (first);
+	return (dst);
 }
 
 /*

@@ -6,19 +6,15 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 12:20:29 by hecmarti          #+#    #+#             */
-/*   Updated: 2023/08/21 11:47:06 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/09/01 10:58:37 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<stdio.h>
 
-int	ft_isprint(int a)
+int	ft_isprint(int c)
 {
-	if ((a > 31) && (a < 123))
-	{
-		return (1);
-	}
-	return (0);
+	return (c >= 32 && c <= 126);
 }
 
 /*

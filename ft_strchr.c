@@ -6,7 +6,7 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 13:04:26 by hecmarti          #+#    #+#             */
-/*   Updated: 2023/08/21 11:48:03 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/10/03 17:45:14 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strchr(const char *str, int c)
 	int	count;
 
 	count = 0;
-	if (str == 0)
+	if (str == NULL)
 		return (NULL);
 	while (str[count])
 	{
@@ -25,17 +25,7 @@ char	*ft_strchr(const char *str, int c)
 			return ((char *)&str[count]);
 		count++;
 	}
+	if (c == '\0')
+		return ((char *)&str[count]);
 	return (NULL);
 }
-
-/*
-int	main(void)
-{
-	const char	*str;
-	int			c;
-
-	str = "Holoa";
-	c = 'o';
-	printf("%s", ft_strchr(str, c));
-}
-*/
