@@ -6,7 +6,7 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 11:04:41 by hecmarti          #+#    #+#             */
-/*   Updated: 2023/08/21 10:27:37 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/10/04 15:38:37 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,6 @@
 
 void	ft_putendl_fd(char const *s, int fd)
 {
-	if (!s)
-		return ;
-	if (fd < 0)
-		return ;
-	ft_putendl_fd(s, fd);
-	write(fd, "\n", 1);
+	ft_putstr_fd((char *)s, fd);
+	ft_putchar_fd('\n', fd);
 }
