@@ -6,16 +6,36 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 16:30:45 by hecmarti          #+#    #+#             */
-/*   Updated: 2023/08/31 11:26:21 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/10/16 14:48:37 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include<stdio.h>
-#include<stdlib.h>
 
 #include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
+{
+	char			*substr;
+	unsigned int	length;
+
+	if (!s)
+		return (NULL);
+	length = ft_strlen(s);
+	if (len <= 0 || start >= length)
+	{
+		substr = (char *)malloc(1);
+		substr[0] = '\0';
+		return (substr);
+	}
+	if (len > length)
+		len = length - start;
+	substr = malloc (sizeof(*s) * (len + 1));
+	if (!substr)
+		return (NULL);
+	ft_strlcpy(substr, &s[start], len + 1);
+	return (substr);
+}
+
+/*char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
 	char	*s2;
@@ -31,8 +51,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	s2[i] = '\0';
 	return (s2);
-}
-
+}*/
 /*
 int	main(void)
 {

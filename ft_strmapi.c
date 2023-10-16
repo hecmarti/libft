@@ -6,15 +6,32 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 09:29:40 by hecmarti          #+#    #+#             */
-/*   Updated: 2023/08/21 10:01:06 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/10/16 14:39:12 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+{
+	char	*mapi;
+	size_t	i;
+
+	i = 0;
+	if (!s || !f)
+		return (NULL);
+	mapi = malloc(ft_strlen(s) + 1);
+	if (!mapi)
+		return (NULL);
+	while (s[i])
+	{
+		mapi[i] = f(i, s[i]);
+		i++;
+	}
+	mapi[i] = '\0';
+	return (mapi);
+}
+/*char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*result;
 	size_t	len;
@@ -41,7 +58,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 char	modify_char(unsigned int index, char c)
 {
 	return (c + index);
-}
+}*/
+
 /*
 int	main(void)
 {
