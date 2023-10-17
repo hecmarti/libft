@@ -6,16 +6,31 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 16:34:49 by hecmarti          #+#    #+#             */
-/*   Updated: 2023/10/16 14:50:11 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/10/17 15:49:34 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "libft.h"
 
-#include "libft.h"
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	unsigned int	init;
+	size_t			end;
 
-static size_t	trimstart(char const *set, char const	*trim)
+	if (!s1)
+		return (ft_strdup(""));
+	if (!set)
+		return (ft_strdup(s1));
+	init = 0;
+	while (s1[init] && ft_strchr(set, s1[init]))
+		init++;
+	end = ft_strlen(s1);
+	while (end && ft_strchr(set, s1[end]))
+		end--;
+	return (ft_substr(s1, init, end - init + 1));
+}
+/*static size_t	trimstart(char const *set, char const	*trim)
 {
 	size_t	start;
 	int		found;
@@ -30,7 +45,6 @@ static size_t	trimstart(char const *set, char const	*trim)
 	}
 	return (start);
 }
-
 static size_t	trimend(char const *set, char const	*trim)
 {
 	size_t	length;
@@ -48,7 +62,6 @@ static size_t	trimend(char const *set, char const	*trim)
 	}
 	return (end);
 }
-
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	start;
@@ -66,8 +79,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	s = malloc(1);
 	s[0] = '\0';
 	return (s);
-}
-
+}*/
 /*char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		start;

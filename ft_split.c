@@ -6,78 +6,87 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 09:40:05 by hecmarti          #+#    #+#             */
-/*   Updated: 2023/09/01 10:15:51 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/10/17 18:33:40 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-static int	count_words(const char *str, char c)
-{
-	int	count;
-	int	in_word;
-
-	count = 0;
-	in_word = 0;
-	while (*str)
-	{
-		if (*str != c)
-		{
-			if (!in_word)
-			{
-				count++;
-				in_word = 1;
-			}
-		}
-		else
-		{
-			in_word = 0;
-		}
-		str++;
-	}
-	return (count);
-}
-
-static void	fill_split(char const *s, char c, char **split)
+static void	ft_free(void **ss)
 {
 	size_t	i;
-	size_t	j;
-	size_t	start;
 
 	i = 0;
-	j = 0;
-	start = 0;
-	while (s[i])
+	while (ss[i])
 	{
-		if (s[i] == c)
-		{
-			if (start != i)
-				split[j++] = ft_substr(s, start, i - start);
-			start = i + 1;
-		}
+		free(ss[i]);
 		i++;
 	}
-	if (start != i)
-		split[j++] = ft_substr(s, start, i - start);
+	free(ss);
+}
+
+static int	ft_countwords(const char	*s, char c)
+{
+	int		n_words;
+	int		i;
+
+	i = 0;
+	n_words = 0;
+	while (s[i])
+	{
+		while (s[i] == c)
+			i++;
+		if (s[i] != '\0')
+			n_words++;
+		while (s[i] != c && s[i])
+			i++;
+	}
+	return (n_words);
+}
+
+static char	**ft_build_split(const char *s, char c)
+{
+	char	**split;
+	int		i;
+	int		j;
+	int		start;
+	int		length;
+
+	i = -1;
+	j = 0;
+	start = -1;
+	length = ft_strlen(s);
+	split = (char **) malloc((ft_countwords(s, c) + 1) * sizeof(char *));
+	if (!split || sizeof(split) == 0)
+		return (NULL);
+	while (++i <= length)
+	{
+		if (s[i] != c && start < 0)
+			start = i;
+		else if (start >= 0 && (s[i] == c || i == length))
+		{
+			split[j] = ft_substr(s, start, i - start);
+			if (!split[j])
+			{
+				ft_free((void **)split);
+				return (NULL);
+			}
+			start = -1;
+			j++;
+		}
+	}
+	split[j] = NULL;
+	return (split);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	**split;
-
 	if (!s)
 		return (NULL);
-	split = (char **)malloc((count_words(s, c) + 1) * sizeof(char *));
-	if (!split)
-		return (NULL);
-	fill_split(s, c, split);
-	split[count_words(s, c)] = NULL;
-	return (split);
+	return (ft_build_split(s, c));
 }
 
-/*
-int	main(void)
+/*int	main(void)
 {
 	const char *str = "Split,,this,string,using,,comma,,,";
 	char c = ',';

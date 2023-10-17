@@ -6,7 +6,7 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/10 11:23:58 by hecmarti          #+#    #+#             */
-/*   Updated: 2023/08/21 10:20:51 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/10/16 15:08:58 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,7 @@ void	*ft_calloc(size_t count, size_t size)
 		byte_ptr = (unsigned char *)ptr;
 		while (i < total_size)
 		{
-			if (i < total_size)
-				byte_ptr[i] = 0;
+			byte_ptr[i] = 0;
 			i++;
 		}
 	}

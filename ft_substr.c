@@ -6,7 +6,7 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 16:30:45 by hecmarti          #+#    #+#             */
-/*   Updated: 2023/10/16 14:48:37 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/10/17 16:26:57 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,29 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char			*substr;
-	unsigned int	length;
+	size_t	count;
+	size_t	size;
+	char	*tab;
 
 	if (!s)
 		return (NULL);
-	length = ft_strlen(s);
-	if (len <= 0 || start >= length)
-	{
-		substr = (char *)malloc(1);
-		substr[0] = '\0';
-		return (substr);
-	}
-	if (len > length)
-		len = length - start;
-	substr = malloc (sizeof(*s) * (len + 1));
-	if (!substr)
+	if ((unsigned int)ft_strlen(s) < start)
+		return (ft_strdup(""));
+	size = ft_strlen(s + start);
+	if (size < len)
+		len = size;
+	tab = (char *)malloc((len + 1) * sizeof(char));
+	if (!tab)
 		return (NULL);
-	ft_strlcpy(substr, &s[start], len + 1);
-	return (substr);
+	count = 0;
+	while (count < len)
+	{
+		tab[count] = s[start + count];
+		count++;
+	}
+	tab[count] = '\0';
+	return (tab);
 }
-
 /*char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
