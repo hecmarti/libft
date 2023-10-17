@@ -6,13 +6,13 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 09:40:05 by hecmarti          #+#    #+#             */
-/*   Updated: 2023/10/17 18:33:40 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/10/17 19:19:20 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	ft_free(void **ss)
+static void	*ft_free(void **ss)
 {
 	size_t	i;
 
@@ -23,6 +23,7 @@ static void	ft_free(void **ss)
 		i++;
 	}
 	free(ss);
+	return (NULL);
 }
 
 static int	ft_countwords(const char	*s, char c)
@@ -47,35 +48,28 @@ static int	ft_countwords(const char	*s, char c)
 static char	**ft_build_split(const char *s, char c)
 {
 	char	**split;
-	int		i;
-	int		j;
-	int		start;
-	int		length;
+	int		i[3];
 
-	i = -1;
-	j = 0;
-	start = -1;
-	length = ft_strlen(s);
+	i[0] = -1;
+	i[1] = 0;
+	i[2] = -1;
 	split = (char **) malloc((ft_countwords(s, c) + 1) * sizeof(char *));
 	if (!split || sizeof(split) == 0)
 		return (NULL);
-	while (++i <= length)
+	while (++i[0] <= (int)ft_strlen(s))
 	{
-		if (s[i] != c && start < 0)
-			start = i;
-		else if (start >= 0 && (s[i] == c || i == length))
+		if (s[i[0]] != c && i[2] < 0)
+			i[2] = i[0];
+		else if (i[2] >= 0 && (s[i[0]] == c || i[0] == (int)ft_strlen(s)))
 		{
-			split[j] = ft_substr(s, start, i - start);
-			if (!split[j])
-			{
-				ft_free((void **)split);
-				return (NULL);
-			}
-			start = -1;
-			j++;
+			split[i[1]] = ft_substr(s, i[2], i[0] - i[2]);
+			if (!split[i[1]])
+				return ((char **)ft_free((void **)split));
+			i[2] = -1;
+			i[1]++;
 		}
 	}
-	split[j] = NULL;
+	split[i[1]] = NULL;
 	return (split);
 }
 
