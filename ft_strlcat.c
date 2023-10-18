@@ -6,34 +6,12 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 16:16:06 by hecmarti          #+#    #+#             */
-/*   Updated: 2023/10/03 16:15:21 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/10/18 15:00:43 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<stdio.h>
 #include"libft.h"
-/*size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
-{
-	int		i;
-	size_t	len_dst;
-	size_t	len_src;
-	size_t	result;
-
-	len_src = ft_strlen((char *)src);
-	len_dst = ft_strlen(dst);
-	result = len_dst;
-	i = 0;
-	if (dstsize <= len_dst + 1)
-	{
-		if (dstsize == len_dst + 1)
-			return (len_src + dstsize - 1);
-		return (len_src + dstsize);
-	}
-	while (src[i] != '\0' && (size_t)i < dstsize)
-		dst[len_dst++] = src[i++];
-	dst[dstsize - 1] = '\0';
-	return (len_src + result);
-}*/
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
@@ -50,7 +28,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dlen = d - dst;
 	n = dstsize - dlen;
 	if (n == 0)
-		return (dlen + strlen(s));
+		return (dlen + ft_strlen(s));
 	while (*s != '\0')
 	{
 		if (n != 1)

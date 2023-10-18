@@ -6,7 +6,7 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 16:58:22 by hecmarti          #+#    #+#             */
-/*   Updated: 2023/10/04 15:51:59 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/10/18 14:59:49 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,27 +30,6 @@ int	ft_memcmp(const void *rstr1, const void *rstr2, size_t n)
 	return (0);
 }
 
-/*int	ft_memcmp(const void *rstr1, const void *rstr2, size_t n)
-{
-	size_t	count;
-	char	*str1;
-	char	*str2;
-
-	count = 0;
-	str1 = (char *)rstr1;
-	str2 = (char *)rstr2;
-	while (str1[count] && str2[count] && (size_t)count <= n)
-	{
-		if (str1[count] > str2[count])
-			return (1);
-		if (str1[count] < str2[count])
-			return (-1);
-		if (str1[count] == str2[count])
-			return (0);
-	count++;
-	}
-	return ('NULL');
-}*/
 /*
 int	main(void)
 {

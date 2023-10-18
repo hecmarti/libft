@@ -6,7 +6,7 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 14:51:35 by hecmarti          #+#    #+#             */
-/*   Updated: 2023/10/03 18:57:39 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/10/18 15:01:03 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,26 +28,6 @@ char	*ft_strrchr(const char *str, int c)
 	return (NULL);
 }
 
-/*char	*ft_strrchr(const char *str, int c)
-{
-	int	count;
-	int	marks;
-
-	count = 0;
-	marks = -1;
-	while (str[count])
-	{
-		if (str[count] == c)
-			marks = count;
-		count++;
-	}
-	while (str[marks])
-	{
-		return ((char *)&str[marks]);
-		marks++;
-	}
-	return (NULL);
-}*/
 /*
 int	main(void)
 {

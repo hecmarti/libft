@@ -6,7 +6,7 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 18:09:40 by hecmarti          #+#    #+#             */
-/*   Updated: 2023/10/04 15:10:39 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/10/18 14:59:44 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,23 +29,6 @@ void	*ft_memchr(const void *str, int c, size_t n)
 	return (NULL);
 }
 
-/*void	*ft_memchr(const void *str, int c, size_t n)
-{
-	char	*cstr;
-	size_t	i;
-
-	i = 0;
-	cstr = (char *)str;
-	if (str == 0 || n == 0)
-		return (NULL);
-	while (cstr[i] != '\0')
-	{
-		if (cstr[i] == c && i <= n)
-			return ((char *)&str[i]);
-		i++;
-	}
-	return (NULL);
-}*/
 /*
 int	main(void)
 {

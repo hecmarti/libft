@@ -6,7 +6,7 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 13:58:50 by hecmarti          #+#    #+#             */
-/*   Updated: 2023/10/16 13:59:25 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/10/18 14:59:36 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,52 +68,6 @@ char	*ft_itoa(int n)
 		itoa[numsize] = n + '0';
 	return (itoa);
 }
-/*static int	get_num_len(int n)
-{
-	int	len;
-
-	len = 0;
-	if (n == 0)
-		len = 1;
-	while (n != 0)
-	{
-		n /= 10;
-		len++;
-	}
-	return (len);
-}
-
-char	*ft_itoa(int n)
-{
-	int		len;
-	int		sign;
-	char	*str;
-
-	len = get_num_len(n);
-	sign = 1;
-	if (n < 0)
-	{
-		sign = -1;
-		len++;
-	}
-	str = (char *)malloc((len + 1) * sizeof(char));
-	if (!str)
-		return (NULL);
-	str[len] = '\0';
-	if (n == 0)
-		str[0] = '0';
-	else
-	{
-		while (n)
-		{
-			str[--len] = '0' + (n % 10) * sign;
-			n /= 10;
-		}
-	}
-	if (sign == -1)
-		str[0] = '-';
-	return (str);
-}*/
 
 /*
 int	main(void)

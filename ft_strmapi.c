@@ -6,7 +6,7 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 09:29:40 by hecmarti          #+#    #+#             */
-/*   Updated: 2023/10/16 14:39:12 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/10/18 15:00:54 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,34 +31,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	mapi[i] = '\0';
 	return (mapi);
 }
-/*char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
-{
-	char	*result;
-	size_t	len;
-	size_t	i;
-
-	if (!s || !*s)
-		return (NULL);
-	len = 0;
-	while (s[len])
-		len++;
-	result = (char *)malloc(sizeof(char) * (len + 1));
-	if (!result)
-		return (NULL);
-	i = 0;
-	while (i < len)
-	{
-		result[i] = f(i, s[i]);
-		i++;
-	}
-	result[i] = '\0';
-	return (result);
-}
-
-char	modify_char(unsigned int index, char c)
-{
-	return (c + index);
-}*/
 
 /*
 int	main(void)

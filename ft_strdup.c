@@ -6,7 +6,7 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 10:12:14 by hecmarti          #+#    #+#             */
-/*   Updated: 2023/08/21 10:24:52 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/10/18 14:55:12 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strdup(const char *s)
 	size_t	len;
 	char	*copy;
 
-	len = strlen(s) + 1;
+	len = ft_strlen(s) + 1;
 	copy = (char *)malloc(len);
 	if (copy == NULL)
 		return (NULL);

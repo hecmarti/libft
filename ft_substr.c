@@ -6,7 +6,7 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 16:30:45 by hecmarti          #+#    #+#             */
-/*   Updated: 2023/10/17 16:26:57 by hecmarti         ###   ########.fr       */
+/*   Updated: 2023/10/18 15:01:18 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,23 +37,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	tab[count] = '\0';
 	return (tab);
 }
-/*char	*ft_substr(char const *s, unsigned int start, size_t len)
-{
-	size_t	i;
-	char	*s2;
-
-	i = 0;
-	s2 = (char *)malloc(sizeof(char) * (len + 1));
-	if (!s || !s2)
-		return (NULL);
-	while (i < len && s[start + i])
-	{
-		s2[i] = s[start + i];
-		i++;
-	}
-	s2[i] = '\0';
-	return (s2);
-}*/
 /*
 int	main(void)
 {
